@@ -4,74 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - Browsie</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     body {
       background: #111;
       color: white;
-      overflow: hidden;
       position: relative;
+      overflow: hidden;
     }
 
     nav {
-      background-color: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.6);
       padding: 15px 0;
-      z-index: 2;
-      position: relative;
       text-align: center;
+      position: relative;
+      z-index: 2;
     }
 
     nav a {
-      color: #fff;
+      color: white;
       text-decoration: none;
       margin: 0 20px;
-      font-weight: 600;
       font-size: 18px;
-      transition: color 0.3s ease;
+      font-weight: bold;
     }
 
     nav a:hover {
-      color: #ffcc00;
+      color: yellow;
     }
 
     .container {
-      margin-top: 100px;
-      z-index: 2;
-      position: relative;
+      margin-top: 80px;
       text-align: center;
-      padding: 20px;
+      position: relative;
+      z-index: 2;
     }
 
     h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
+      font-size: 3em;
+      margin-bottom: 10px;
     }
 
     p {
       font-size: 18px;
-      line-height: 1.6;
     }
 
     footer {
       margin-top: 60px;
       padding: 10px;
-      background-color: rgba(0, 0, 0, 0.2);
+      text-align: center;
+      background: rgba(0, 0, 0, 0.2);
       z-index: 2;
       position: relative;
-      text-align: center;
     }
 
     /* Bouncing Balls */
     .ball {
-      width: 20px;
-      height: 20px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       position: absolute;
       animation: bounce 5s infinite ease-in-out;
@@ -87,6 +83,7 @@
   </style>
 </head>
 <body>
+
   <!-- Bouncing Balls -->
   <div class="ball" style="background: #ff4d4d; left: 10%; animation-delay: 0s;"></div>
   <div class="ball" style="background: #00ccff; left: 30%; animation-delay: 1s;"></div>
@@ -104,10 +101,7 @@
   <!-- Content -->
   <div class="container">
     <h1>Contact Me</h1>
-    <p>
-      📧 Email: <strong>swastik2436@gmail.com</strong><br><br>
-      I'm happy to hear from you. Feel free to reach out!
-    </p>
+    <p>Email: <strong>swastik2436@gmail.com</strong></p>
   </div>
 
   <!-- Footer -->
