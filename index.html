@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Browsie - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #1a1a1a;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 15px 0;
+      position: relative;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .container {
+      margin-top: 80px;
+      z-index: 10;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    form {
+      margin-top: 25px;
+    }
+
+    input[type="text"] {
+      padding: 12px;
+      width: 60%;
+      max-width: 400px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #ffcc00;
+      color: #333;
+      border: none;
+      border-radius: 6px;
+      margin-left: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e6b800;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      position: relative;
+    }
+
+    .ball {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      animation: bounce 5s infinite ease-in-out;
+      opacity: 0.7;
+      z-index: 0;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0) translateX(0);
+      }
+      50% {
+        transform: translateY(80vh) translateX(100px);
+      }
+      100% {
+        transform: translateY(0) translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Bouncing Balls -->
+  <div class="ball" style="background: #ff4d4d; left: 10%; animation-delay: 0s;"></div>
+  <div class="ball" style="background: #00ccff; left: 30%; animation-delay: 1s;"></div>
+  <div class="ball" style="background: #00ff99; left: 50%; animation-delay: 2s;"></div>
+  <div class="ball" style="background: #ffcc00; left: 70%; animation-delay: 1.5s;"></div>
+  <div class="ball" style="background: #cc66ff; left: 90%; animation-delay: 0.5s;"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Welcome to Browsie</h1>
+    <p>Search anything instantly below:</p>
+
+    <form action="https://www.google.com/search" method="GET" target="_blank">
+      <input type="text" name="q" placeholder="Search the web...">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Browsie by Swastik. All rights reserved.
+  </footer>
+</body>
+</html>
