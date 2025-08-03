@@ -1,4 +1,4 @@
-      <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -14,17 +14,18 @@
     }
 
     body {
-      background: #1a1a1a;
+      background: #111;
       color: white;
-      text-align: center;
       overflow: hidden;
+      position: relative;
     }
 
     nav {
       background-color: rgba(0, 0, 0, 0.6);
       padding: 15px 0;
-      z-index: 10;
+      z-index: 2;
       position: relative;
+      text-align: center;
     }
 
     nav a {
@@ -41,50 +42,47 @@
     }
 
     .container {
-      margin-top: 80px;
-      z-index: 10;
+      margin-top: 100px;
+      z-index: 2;
       position: relative;
-      padding: 20px;
+      text-align: center;
     }
 
     h1 {
       font-size: 3rem;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     p {
       font-size: 18px;
       line-height: 1.6;
+      padding: 0 20px;
     }
 
     footer {
       margin-top: 60px;
       padding: 10px;
       background-color: rgba(0, 0, 0, 0.2);
-      z-index: 10;
+      z-index: 2;
       position: relative;
+      text-align: center;
     }
 
-    /* Bouncing Balls Background */
+    /* Bouncing Balls */
     .ball {
       width: 20px;
       height: 20px;
       border-radius: 50%;
       position: absolute;
       animation: bounce 5s infinite ease-in-out;
-      opacity: 0.7;
+      opacity: 0.6;
+      z-index: 1;
     }
 
     @keyframes bounce {
-      0% {
-        transform: translateY(0) translateX(0);
-      }
-      50% {
-        transform: translateY(80vh) translateX(100px);
-      }
-      100% {
-        transform: translateY(0) translateX(0);
-      }
+      0% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(80vh) translateX(100px); }
+      100% { transform: translateY(0) translateX(0); }
     }
   </style>
 </head>
@@ -103,13 +101,13 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- About Content -->
+  <!-- Content -->
   <div class="container">
     <h1>About Swastik</h1>
     <p>
       Hello! I'm Swastik, the creator of Browsie.<br><br>
-      I love building websites and learning new technologies.<br>
-      You can contact me at: <strong>swastik2436@gmail.com</strong>
+      I enjoy coding and building websites.<br>
+      📧 Contact me: <strong>swastik2436@gmail.com</strong>
     </p>
   </div>
 
