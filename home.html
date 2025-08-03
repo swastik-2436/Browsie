@@ -112,6 +112,29 @@
       }
     }
   </style>
+  <style>
+  .ball {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    animation: bounce 5s infinite ease-in-out;
+    opacity: 0.7;
+    z-index: 0;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(80vh) translateX(100px);
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+  </style>
 </head>
 <body>
   <!-- Bouncing Balls -->
