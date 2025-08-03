@@ -14,17 +14,17 @@
     }
 
     body {
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      background: #1a1a1a;
       color: white;
       text-align: center;
-      animation: fadeIn 1s ease-in;
-      min-height: 100vh;
+      overflow: hidden;
     }
 
     nav {
       background-color: rgba(0, 0, 0, 0.6);
       padding: 15px 0;
-      animation: slideDown 1s ease-out;
+      z-index: 10;
+      position: relative;
     }
 
     nav a {
@@ -42,7 +42,8 @@
 
     .container {
       margin-top: 80px;
-      animation: zoomIn 1s ease-in-out;
+      z-index: 10;
+      position: relative;
     }
 
     h1 {
@@ -85,34 +86,49 @@
       margin-top: 60px;
       padding: 10px;
       background-color: rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      position: relative;
     }
 
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    /* Bouncing Balls Background */
+    .ball {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      animation: bounce 5s infinite ease-in-out;
+      opacity: 0.7;
     }
 
-    @keyframes slideDown {
-      from { transform: translateY(-50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes zoomIn {
-      from { transform: scale(0.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
+    @keyframes bounce {
+      0% {
+        transform: translateY(0) translateX(0);
+      }
+      50% {
+        transform: translateY(80vh) translateX(100px);
+      }
+      100% {
+        transform: translateY(0) translateX(0);
+      }
     }
   </style>
 </head>
-<body<body style="animation: fadeIn 1s ease-in;">
-<nav style="animation: slideDown 1s ease-out;">
-<div class="container" style="animation: zoomIn 1s ease-in-out;">>
+<body>
+  <!-- Bouncing Balls -->
+  <div class="ball" style="background: #ff4d4d; left: 10%; animation-delay: 0s;"></div>
+  <div class="ball" style="background: #00ccff; left: 30%; animation-delay: 1s;"></div>
+  <div class="ball" style="background: #00ff99; left: 50%; animation-delay: 2s;"></div>
+  <div class="ball" style="background: #ffcc00; left: 70%; animation-delay: 1.5s;"></div>
+  <div class="ball" style="background: #cc66ff; left: 90%; animation-delay: 0.5s;"></div>
+
+  <!-- Navigation -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
 
+  <!-- Main Content -->
   <div class="container">
     <h1>Welcome to Browsie</h1>
     <p>Search anything instantly below:</p>
@@ -123,6 +139,7 @@
     </form>
   </div>
 
+  <!-- Footer -->
   <footer>
     &copy; 2025 Browsie by Swastik. All rights reserved.
   </footer>
