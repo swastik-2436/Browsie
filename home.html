@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Browsie - Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -14,17 +14,17 @@
     }
 
     body {
-      background: linear-gradient(to right, #1e3c72, #2a5298);
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: white;
       text-align: center;
+      animation: fadeIn 1s ease-in;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
     }
 
     nav {
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.6);
       padding: 15px 0;
+      animation: slideDown 1s ease-out;
     }
 
     nav a {
@@ -37,60 +37,70 @@
     }
 
     nav a:hover {
-      color: #ffdd57;
+      color: #ffcc00;
     }
 
     .container {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 30px 15px;
+      margin-top: 80px;
+      animation: zoomIn 1s ease-in-out;
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
+      font-size: 3rem;
+      margin-bottom: 15px;
     }
 
     form {
-      display: flex;
-      width: 100%;
-      max-width: 500px;
+      margin-top: 25px;
     }
 
     input[type="text"] {
-      flex: 1;
-      padding: 12px 15px;
-      border: none;
-      border-radius: 8px 0 0 8px;
+      padding: 12px;
+      width: 60%;
+      max-width: 400px;
       font-size: 16px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
     }
 
     button {
       padding: 12px 20px;
-      background-color: #ffdd57;
+      font-size: 16px;
+      background-color: #ffcc00;
+      color: #333;
       border: none;
-      border-radius: 0 8px 8px 0;
-      font-weight: 600;
+      border-radius: 6px;
+      margin-left: 10px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      font-weight: bold;
+      transition: background 0.3s ease;
     }
 
     button:hover {
-      background-color: #ffc107;
+      background-color: #e6b800;
     }
 
     footer {
-      padding: 15px;
+      margin-top: 60px;
+      padding: 10px;
       background-color: rgba(0, 0, 0, 0.2);
-      font-size: 14px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
   </style>
 </head>
@@ -103,7 +113,7 @@
 
   <div class="container">
     <h1>Welcome to Browsie</h1>
-    <p>Your lightweight browser for instant searches</p>
+    <p>Search anything instantly below:</p>
 
     <form action="https://www.google.com/search" method="GET" target="_blank">
       <input type="text" name="q" placeholder="Search the web...">
@@ -112,7 +122,7 @@
   </div>
 
   <footer>
-    &copy; 2025 Browsie. All rights reserved.
+    &copy; 2025 Browsie by Swastik. All rights reserved.
   </footer>
 </body>
 </html>
